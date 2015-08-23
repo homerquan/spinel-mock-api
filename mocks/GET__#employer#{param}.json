@@ -1,0 +1,15 @@
+{
+	"meta": {},
+	"data": {
+		"title": "Yoggle",
+		"address": "",
+		"team": [{
+			"name": "alex 06",
+			"avatar": "http://foo.com/xyz.png",
+			"link": "/person/alex"
+		}],
+		"description": "",
+		"contact": {}
+	}
+
+}

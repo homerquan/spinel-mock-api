@@ -1,0 +1,9 @@
+{
+	"meta": {},
+	"data": {
+		"access_token": "WBLP4sUZfg4b31oHUI7WYxVQ9eE1V5NlYbdXf4PcE56WRGL4iGzxZfKORIYGnTRS1b7yPCTohuJeufH49Qgn7TZNoWqtTclnv6qbarD1XjdBnZygUGu08yGXzZ8Fu8aGRUHlnWVbptJOvscnrPn6AmIBJykACPmOm6KHXK3q8G7iq7YaW34KGBy75ZQbqZDB6x14M6FJSajHjBLOgICFLCiJZBsAs33afVGdVMCVhoOPU1fbnUneVOFos8fgEdDf",
+		"refresh_token": "l88osCp7wRcC3bAdzsn4DauIA2PABqL27xXWJ2HbfWnHBTHQvJrrAYLD6Pptt9cBisQdqf6n9bB64DRCFxdEWk6CTLcRMpKW0FXJydCLq8ncO5GzDa6woMM3gtbbWD0c0CgIXHuIuTzfgZrrt4qBxUb1vii96NT67WbIVFkVcjzqTXuUHkfhOlOSckit2lbB8DvY2Gr7DzR7FsS0cBImhPSXFQbR9Rchp1bGsUsdC4GDOl7wMRBeXl9WK6IxbUqR",
+		"expires_in": 3600,
+		"token_type": "bearer"
+	}
+}

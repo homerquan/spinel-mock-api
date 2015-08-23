@@ -1,0 +1,296 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>HIPPIE MOCKUP API (version 0.0.1)</title><link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"><link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700|Inconsolata|Raleway:200"><style>/* Highlight.js Theme Tomorrow */
+.hljs-comment,.hljs-title{color:#8e908c}.hljs-variable,.hljs-attribute,.hljs-tag,.hljs-regexp,.ruby .hljs-constant,.xml .hljs-tag .hljs-title,.xml .hljs-pi,.xml .hljs-doctype,.html .hljs-doctype,.css .hljs-id,.css .hljs-class,.css .hljs-pseudo{color:#c82829}.hljs-number,.hljs-preprocessor,.hljs-pragma,.hljs-built_in,.hljs-literal,.hljs-params,.hljs-constant{color:#f5871f}.ruby .hljs-class .hljs-title,.css .hljs-rules .hljs-attribute{color:#eab700}.hljs-string,.hljs-value,.hljs-inheritance,.hljs-header,.ruby .hljs-symbol,.xml .hljs-cdata{color:#718c00}.css .hljs-hexcolor{color:#3e999f}.hljs-function,.python .hljs-decorator,.python .hljs-title,.ruby .hljs-function .hljs-title,.ruby .hljs-title .hljs-keyword,.perl .hljs-sub,.javascript .hljs-title,.coffeescript .hljs-title{color:#4271ae}.hljs-keyword,.javascript .hljs-function{color:#8959a8}.hljs{display:block;background:white;color:#4d4d4c;padding:.5em}.coffeescript .javascript,.javascript .xml,.tex .hljs-formula,.xml .javascript,.xml .vbscript,.xml .css,.xml .hljs-cdata{opacity:.5}</style><style>body,
+h4,
+h5 {
+  font-family: 'Roboto' sans-serif !important;
+}
+h1,
+h2,
+h3,
+.aglio {
+  font-family: 'Raleway' sans-serif !important;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a {
+  display: none;
+}
+h1:hover a,
+h2:hover a,
+h3:hover a,
+h4:hover a,
+h5:hover a {
+  display: inline;
+}
+code {
+  color: #444;
+  background-color: #ddd;
+  font-family: 'Inconsolata' monospace !important;
+}
+a[data-target] {
+  cursor: pointer;
+}
+h4 {
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.back-to-top {
+  position: fixed;
+  z-index: 1;
+  bottom: 0px;
+  right: 24px;
+  padding: 4px 8px;
+  background-color: #eee;
+  text-decoration: none !important;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  border-left: 1px solid rgba(0,0,0,0.1);
+  border-right: 1px solid rgba(0,0,0,0.1);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.panel {
+  overflow: hidden;
+}
+.panel-heading code {
+  margin-left: 3px;
+  color: #c7254e;
+  background-color: rgba(255,255,255,0.7);
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+.panel-heading h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+a.list-group-item:hover {
+  background-color: #f8f8f8;
+  border-left: 2px solid #555;
+  padding-left: 15px;
+}
+.indent {
+  display: block;
+  text-indent: 16px;
+}
+.list-group-item {
+  padding-left: 16px;
+}
+.list-group-item .toggle .open {
+  display: block;
+}
+.list-group-item .toggle .closed {
+  display: none;
+}
+.list-group-item.collapsed .toggle .open {
+  display: none;
+}
+.list-group-item.collapsed .toggle .closed {
+  display: block;
+}
+a.list-group-item {
+  font-size: 13px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+a.list-group-item.heading {
+  font-size: 15px;
+  background-color: #f5f5f5;
+}
+a.list-group-item.heading:hover {
+  background-color: #f8f8f8;
+}
+.list-group-item.collapse {
+  display: none;
+}
+.list-group-item.collapse.in {
+  display: block;
+}
+.list-group-item a span.closed {
+  display: none;
+}
+.list-group-item a span.open {
+  display: block;
+}
+.list-group-item a.collapsed span.closed {
+  display: block;
+}
+.list-group-item a.collapsed span.open {
+  display: none;
+}
+#nav {
+  width: inherit;
+  margin-top: 38px;
+  max-width: 255px;
+  top: 0;
+  bottom: 0;
+  padding-right: 12px;
+  padding-bottom: 12px;
+  overflow-y: auto;
+}
+@media (max-width: 1199px) {
+  #nav {
+    max-width: 212px;
+  }
+}
+</style></head><body><a href="#top" class="text-muted back-to-top"><i class="fa fa-toggle-up"></i>&nbsp;Back to top</a><div class="container"><div class="row"><div class="col-md-3"><nav id="nav" class="hidden-sm hidden-xs affix nav"><div class="list-group"><a data-toggle="" data-target="#session-menu" href="#session" class="list-group-item heading collapsed">session</a><div id="session-menu"><a href="#session-session" style="border-top-left-radius: 0; border-top-right-radius: 0" class="list-group-item"><span class="badge alert-success"><i class="fa fa-plus"></i></span>Session</a></div></div><div class="list-group"><a data-toggle="" data-target="#user-menu" href="#user" class="list-group-item heading collapsed">User</a><div id="user-menu"><a href="#user-user" style="border-top-left-radius: 0; border-top-right-radius: 0" class="list-group-item">User</a><a href="#user-user-post" style="border-top-left-radius: 0; border-top-right-radius: 0" class="list-group-item"><span class="badge alert-success"><i class="fa fa-plus"></i></span><span class="indent">Register a user</span></a><a href="#user-user-get" style="border-top-left-radius: 0; border-top-right-radius: 0" class="list-group-item"><span class="badge alert-info"><i class="fa fa-arrow-down"></i></span><span class="indent">Retrival a user</span></a><a href="#user-me" style="border-top-left-radius: 0; border-top-right-radius: 0" class="list-group-item"><span class="badge alert-info"><i class="fa fa-arrow-down"></i></span>Me</a></div></div><div class="list-group"><a data-toggle="" data-target="#feeds-menu" href="#feeds" class="list-group-item heading collapsed">Feeds</a><div id="feeds-menu"><a href="#feeds-feeds" style="border-top-left-radius: 0; border-top-right-radius: 0" class="list-group-item"><span class="badge alert-info"><i class="fa fa-arrow-down"></i></span>feeds</a></div></div><p style="text-align: center; word-wrap: break-word;"><a href="https://api.foo.com">https://api.foo.com</a></p></nav></div><div class="col-md-8"><div><header><div class="page-header"><h1 id="top">HIPPIE MOCKUP API (version 0.0.1)</h1></div></header><div class="description"></div></div><div><div class="panel panel-default"><div class="panel-heading"><h3 id="session">session&nbsp;<a href="#session"><i class="fa fa-link"></i></a></h3></div><div class="panel-body"><h4 id="session-session">Session&nbsp;<a href="#session-session"><i class="fa fa-link"></i></a></h4><section id="session-session-post" class="panel panel-success"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">Session login, logout</span></div><div style="float:left"><a href="#session-session-post" class="btn btn-xs btn-success">POST</a></div><div style="overflow:hidden"><code>/session{?action}</code></div></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>action</dt><dd><code>String</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>login</span></span><p>The actions for session management</p>
+<ul>
+<li>Options: <code>login</code>, <code>logout</code>, <code>reset_password</code></li>
+</ul>
+</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Request&nbsp;&nbsp;<code>for login</code></strong><a data-toggle="collapse" data-target="#de5065096c336e62fe19871a44c81225" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="de5065096c336e62fe19871a44c81225" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre><h5>Body</h5><pre><code>{
+    "<span class="hljs-attribute">username</span>": <span class="hljs-value"><span class="hljs-string">"user@foo.com"</span></span>, 
+    "<span class="hljs-attribute">password</span>": <span class="hljs-value"><span class="hljs-string">"123456"</span></span>, 
+    "<span class="hljs-attribute">remember</span>": <span class="hljs-value"><span class="hljs-literal">false</span>
+</span>}
+</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#f716a6e28aa28765d22c184124c8674b" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="f716a6e28aa28765d22c184124c8674b" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre><h5>Body</h5><pre><code>{
+    "<span class="hljs-attribute">meta</span>": <span class="hljs-value">{}</span>,
+    "<span class="hljs-attribute">data</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">access_token</span>": <span class="hljs-value"><span class="hljs-string">"WBLP4sUZfg4b31oHUI7WYxVQ9eE1V5NlYbdXf4PcE56WRGL4iGzxZfKORIYGnTRS1b7yPCTohuJeufH49Qgn7TZ            NoWqtTclnv6qbarD1XjdBnZygUGu08yGXzZ8Fu8aGRUHlnWVbptJOvscnrPn6AmIBJykACPmOm6KHXK3q8G7iq7YaW34KGBy75ZQbqZD            B6x14M6FJSajHjBLOgICFLCiJZBsAs33afVGdVMCVhoOPU1fbnUneVOFos8fgEdDf"</span></span>,
+        "<span class="hljs-attribute">refresh_token</span>": <span class="hljs-value"><span class="hljs-string">"l88osCp7wRcC3bAdzsn4DauIA2PABqL27xXWJ2HbfWnHBTHQvJrrAYLD6Pptt9cBisQdqf6n9bB64DRCFxdEWk            6CTLcRMpKW0FXJydCLq8ncO5GzDa6woMM3gtbbWD0c0CgIXHuIuTzfgZrrt4qBxUb1vii96NT67WbIVFkVcjzqTXuUHkfhOlOSckit2l            bB8DvY2Gr7DzR7FsS0cBImhPSXFQbR9Rchp1bGsUsdC4GDOl7wMRBeXl9WK6IxbUqR"</span></span>,
+        "<span class="hljs-attribute">expires_in</span>": <span class="hljs-value"><span class="hljs-number">3600</span></span>,
+        "<span class="hljs-attribute">token_type</span>": <span class="hljs-value"><span class="hljs-string">"bearer"</span>
+    </span>}
+</span>}
+</code></pre></li><li class="list-group-item"><strong>Request&nbsp;&nbsp;<code>for logout</code></strong><a data-toggle="collapse" data-target="#096aeecf751f0847b9ce1a51eadd961c" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="096aeecf751f0847b9ce1a51eadd961c" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre><h5>Body</h5><pre><code><span class="hljs-collection">{}</span>
+</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#0351ae18b56d497c96cf9453bbf85524" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="0351ae18b56d497c96cf9453bbf85524" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre><h5>Body</h5><pre><code>{
+    "<span class="hljs-attribute">meta</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"logout successfully"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">data</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">timestamp</span>": <span class="hljs-value"><span class="hljs-string">"2015-05-16T09:00:00z"</span>
+    </span>}
+</span>}            
+</code></pre></li></ul></section></div></div></div><div><div class="panel panel-default"><div class="panel-heading"><h3 id="user">User&nbsp;<a href="#user"><i class="fa fa-link"></i></a></h3></div><div class="panel-body"><h4 id="user-user">User&nbsp;<a href="#user-user"><i class="fa fa-link"></i></a></h4><section id="user-user-post" class="panel panel-success"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">Register a user</span></div><div style="float:left"><a href="#user-user-post" class="btn btn-xs btn-success">POST</a></div><div style="overflow:hidden"><code>/user</code></div></div><ul class="list-group"><li class="list-group-item"><strong>Request</strong><a data-toggle="collapse" data-target="#439950e72f179eb1bbbd7e4f380066da" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="439950e72f179eb1bbbd7e4f380066da" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">firstname</span>": <span class="hljs-value"><span class="hljs-string">"Homer"</span></span>,
+  "<span class="hljs-attribute">lastname</span>": <span class="hljs-value"><span class="hljs-string">"Quan"</span></span>,
+  "<span class="hljs-attribute">username</span>": <span class="hljs-value"><span class="hljs-string">"homerquan@gmail.com"</span></span>,
+  "<span class="hljs-attribute">password</span>": <span class="hljs-value"><span class="hljs-string">"abcdef"</span></span>,
+  "<span class="hljs-attribute">education</span>":<span class="hljs-value">[
+  {
+      "<span class="hljs-attribute">schole</span>": <span class="hljs-value"><span class="hljs-string">"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5"</span></span>,
+      "<span class="hljs-attribute">year</span>": <span class="hljs-value"><span class="hljs-number">2014</span></span>,
+      "<span class="hljs-attribute">major</span>": <span class="hljs-value"><span class="hljs-string">"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5"</span></span>,
+      "<span class="hljs-attribute">gpa</span>": <span class="hljs-value"><span class="hljs-string">"3.5"</span></span>,
+      "<span class="hljs-attribute">activities</span>": <span class="hljs-value">[]</span>,
+      "<span class="hljs-attribute">interests</span>": <span class="hljs-value">[]
+  </span>}]</span>,
+  "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5"</span></span>,
+  "<span class="hljs-attribute">skills</span>": <span class="hljs-value">[
+    <span class="hljs-string">"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5"</span>,
+    <span class="hljs-string">"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5"</span>,
+    <span class="hljs-string">"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5"</span>
+  ]</span>,
+  "<span class="hljs-attribute">targets</span>": <span class="hljs-value">[
+    <span class="hljs-string">"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5"</span>,
+    <span class="hljs-string">"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5"</span>,
+    <span class="hljs-string">"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5"</span>
+  ]</span>,
+  "<span class="hljs-attribute">avatar</span>": <span class="hljs-value"><span class="hljs-string">"http://foo.com/default-avatar.png"</span></span>,  
+  "<span class="hljs-attribute">website</span>": <span class="hljs-value"><span class="hljs-string">"hoemrquan.com"</span></span>,
+  "<span class="hljs-attribute">telephone</span>": <span class="hljs-value"><span class="hljs-string">"23232323"</span></span>,
+  "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"homerquan@gmail.com"</span>
+</span>}
+</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#b67d4c3f59c5c30d6487fac9bb28ae9c" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="b67d4c3f59c5c30d6487fac9bb28ae9c" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">meta</span>": <span class="hljs-value">{
+  }</span>,
+  "<span class="hljs-attribute">data</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5"</span>
+   </span>}
+</span>}        
+</code></pre></li></ul></section><section id="user-user-get" class="panel panel-info"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">Retrival a user</span></div><div style="float:left"><a href="#user-user-get" class="btn btn-xs btn-primary">GET</a></div><div style="overflow:hidden"><code>/user</code></div></div><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#f8ea10781954283a9654b1013b8d68b5" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="f8ea10781954283a9654b1013b8d68b5" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">meta</span>": <span class="hljs-value">{
+  }</span>,
+  "<span class="hljs-attribute">data</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5"</span></span>,
+     "<span class="hljs-attribute">firstname</span>": <span class="hljs-value"><span class="hljs-string">"Homer"</span></span>,
+     "<span class="hljs-attribute">lastname</span>": <span class="hljs-value"><span class="hljs-string">"Quan"</span></span>,
+     "<span class="hljs-attribute">username</span>": <span class="hljs-value"><span class="hljs-string">"homerquan@gmail.com"</span></span>,
+     "<span class="hljs-attribute">password</span>": <span class="hljs-value"><span class="hljs-string">"abcdef"</span></span>,
+     "<span class="hljs-attribute">education</span>":<span class="hljs-value">[
+     {
+         "<span class="hljs-attribute">schole</span>": <span class="hljs-value"><span class="hljs-string">"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5"</span></span>,
+         "<span class="hljs-attribute">year</span>": <span class="hljs-value"><span class="hljs-number">2014</span></span>,
+         "<span class="hljs-attribute">major</span>": <span class="hljs-value"><span class="hljs-string">"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5"</span></span>,
+         "<span class="hljs-attribute">gpa</span>": <span class="hljs-value"><span class="hljs-string">"3.5"</span></span>,
+         "<span class="hljs-attribute">activities</span>": <span class="hljs-value">[]</span>,
+         "<span class="hljs-attribute">interests</span>": <span class="hljs-value">[]
+     </span>}]</span>,
+     "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5"</span></span>,
+     "<span class="hljs-attribute">skills</span>": <span class="hljs-value">[
+       <span class="hljs-string">"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5"</span>,
+       <span class="hljs-string">"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5"</span>,
+       <span class="hljs-string">"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5"</span>
+     ]</span>,
+     "<span class="hljs-attribute">targets</span>": <span class="hljs-value">[
+       <span class="hljs-string">"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5"</span>,
+       <span class="hljs-string">"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5"</span>,
+       <span class="hljs-string">"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5"</span>
+     ]</span>,
+     "<span class="hljs-attribute">avatar</span>": <span class="hljs-value"><span class="hljs-string">"http://foo.com/default-avatar.png"</span></span>,  
+     "<span class="hljs-attribute">website</span>": <span class="hljs-value"><span class="hljs-string">"hoemrquan.com"</span></span>,
+     "<span class="hljs-attribute">telephone</span>": <span class="hljs-value"><span class="hljs-string">"23232323"</span></span>,
+     "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"homerquan@gmail.com"</span>
+   </span>}
+</span>}            
+</code></pre></li></ul></section><h4 id="user-me">Me&nbsp;<a href="#user-me"><i class="fa fa-link"></i></a></h4><section id="user-me-get" class="panel panel-info"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">User's personal content</span></div><div style="float:left"><a href="#user-me-get" class="btn btn-xs btn-primary">GET</a></div><div style="overflow:hidden"><code>/me</code></div></div><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#a32f12d848622b85337f6099de6f4aa6" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="a32f12d848622b85337f6099de6f4aa6" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre><h5>Body</h5><pre><code>{
+      "<span class="hljs-attribute">meta</span>": <span class="hljs-value">{
+      }</span>,
+      "<span class="hljs-attribute">data</span>": <span class="hljs-value">{
+         "<span class="hljs-attribute">firstname</span>": <span class="hljs-value"><span class="hljs-string">"Homer"</span></span>,
+         "<span class="hljs-attribute">lastname</span>": <span class="hljs-value"><span class="hljs-string">"Quan"</span></span>,
+         "<span class="hljs-attribute">username</span>": <span class="hljs-value"><span class="hljs-string">"homerquan@gmail.com"</span></span>,
+         "<span class="hljs-attribute">education</span>":<span class="hljs-value">[
+         {
+             "<span class="hljs-attribute">schole</span>": <span class="hljs-value"><span class="hljs-string">"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5"</span></span>,
+             "<span class="hljs-attribute">year</span>": <span class="hljs-value"><span class="hljs-number">2014</span></span>,
+             "<span class="hljs-attribute">major</span>": <span class="hljs-value"><span class="hljs-string">"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5"</span></span>,
+             "<span class="hljs-attribute">gpa</span>": <span class="hljs-value"><span class="hljs-string">"3.5"</span></span>,
+             "<span class="hljs-attribute">activities</span>": <span class="hljs-value">[]</span>,
+             "<span class="hljs-attribute">interests</span>": <span class="hljs-value">[]
+         </span>}]</span>,
+         "<span class="hljs-attribute">location</span>": <span class="hljs-value"><span class="hljs-string">"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5"</span></span>,
+         "<span class="hljs-attribute">skills</span>": <span class="hljs-value">[
+           <span class="hljs-string">"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5"</span>,
+           <span class="hljs-string">"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5"</span>,
+           <span class="hljs-string">"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5"</span>
+         ]</span>,
+         "<span class="hljs-attribute">targets</span>": <span class="hljs-value">[
+           <span class="hljs-string">"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5"</span>,
+           <span class="hljs-string">"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5"</span>,
+           <span class="hljs-string">"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5"</span>
+         ]</span>,
+         "<span class="hljs-attribute">avatar</span>": <span class="hljs-value"><span class="hljs-string">"http://foo.com/default-avatar.png"</span></span>,  
+         "<span class="hljs-attribute">website</span>": <span class="hljs-value"><span class="hljs-string">"hoemrquan.com"</span></span>,
+         "<span class="hljs-attribute">telephone</span>": <span class="hljs-value"><span class="hljs-string">"23232323"</span></span>,
+         "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"homerquan@gmail.com"</span>
+    </span>}
+</span>}    
+</code></pre></li></ul></section></div></div></div><div><div class="panel panel-default"><div class="panel-heading"><h3 id="feeds">Feeds&nbsp;<a href="#feeds"><i class="fa fa-link"></i></a></h3></div><div class="panel-body"><h4 id="feeds-feeds">feeds&nbsp;<a href="#feeds-feeds"><i class="fa fa-link"></i></a></h4><section id="feeds-feeds-get" class="panel panel-info"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">User's recommended content feeds</span></div><div style="float:left"><a href="#feeds-feeds-get" class="btn btn-xs btn-primary">GET</a></div><div style="overflow:hidden"><code>/feeds</code></div></div><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#193a46b710b9f4827ef8481df4a2efbd" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="193a46b710b9f4827ef8481df4a2efbd" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre><h5>Body</h5><pre><code>{
+    "<span class="hljs-attribute">meta</span>": <span class="hljs-value">{}</span>,
+    "<span class="hljs-attribute">data</span>": <span class="hljs-value">[{
+        "<span class="hljs-attribute">card</span>": <span class="hljs-value"><span class="hljs-string">"employer"</span></span>,
+        "<span class="hljs-attribute">address</span>": <span class="hljs-value"><span class="hljs-string">""</span></span>,
+        "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Endurance"</span></span>,
+        "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">""</span></span>,
+        "<span class="hljs-attribute">feedbacks</span>": <span class="hljs-value">[]</span>,
+        "<span class="hljs-attribute">actions</span>": <span class="hljs-value">[]
+    </span>}]
+</span>}
+</code></pre></li></ul></section></div></div></div></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 23 Aug 2015</p><div id="localFile" style="display: none; position: absolute; top: 0; left: 0; width: 100%; color: white; background: red; font-size: 150%; text-align: center; padding: 1em;">This page may not display correctly when opened as a local file. Instead, view it from a web server.
+
+</div></body><script src="//code.jquery.com/jquery-1.11.0.min.js"></script><script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script><script>(function() {
+  if (location.protocol === 'file:') {
+    document.getElementById('localFile').style.display = 'block';
+  }
+
+}).call(this);
+</script><script>(function() {
+  $('table').addClass('table');
+
+}).call(this);
+</script></html>

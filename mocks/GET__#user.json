@@ -1,0 +1,33 @@
+{
+	"meta": {},
+	"data": {
+		"id": "f98fe4af-4e4a-480c-bbf7-d266c88e5fa5",
+		"firstname": "Homer",
+		"lastname": "Quan",
+		"username": "homerquan@gmail.com",
+		"password": "abcdef",
+		"education": [{
+			"schole": "f98fe4af-4e4a-480c-bbf7-d266c88e5fa5",
+			"year": 2014,
+			"major": "f98fe4af-4e4a-480c-bbf7-d266c88e5fa5",
+			"gpa": "3.5",
+			"activities": [],
+			"interests": []
+		}],
+		"location": "f98fe4af-4e4a-480c-bbf7-d266c88e5fa5",
+		"skills": [
+			"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5",
+			"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5",
+			"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5"
+		],
+		"targets": [
+			"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5",
+			"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5",
+			"f98fe4af-4e4a-480c-bbf7-d266c88e5fa5"
+		],
+		"avatar": "http://foo.com/default-avatar.png",
+		"website": "hoemrquan.com",
+		"telephone": "23232323",
+		"email": "homerquan@gmail.com"
+	}
+}
